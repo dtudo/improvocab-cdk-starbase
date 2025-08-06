@@ -1,6 +1,14 @@
 {
   "name": "@dtudo/improvocab-cdk-starbase",
   "version": "0.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
   "description": "CDK library of shared infrastructure constructs",
   "license": "UNLICENSED",
   "repository": {
@@ -20,9 +28,12 @@
     "lint:es": "eslint . --fix",
     "lint": "npm run lint:md && npm run lint:es",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "changeset": "changeset"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.5",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/format": "^19.8.1",
@@ -49,5 +60,9 @@
   "peerDependencies": {
     "aws-cdk-lib": "^2.209.0",
     "constructs": "^10.4.2"
+  },
+  "exports": {
+    ".": "./build/index.js",
+    "./core": "./build/core/index.js"
   }
 }

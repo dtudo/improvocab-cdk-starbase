@@ -28,6 +28,12 @@ node --version
 npm --version
 ```
 
+Authenticate to GitHub Packages npm registry. When prompted for the password, use a GitHub [Personal Access Token (PAT)](https://github.com/settings/tokens) with `repo`, `read:packages` and `write:packages` permissions. [Learn more](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
+
+```bash
+npm login --registry=https://npm.pkg.github.com
+```
+
 Run `make install` to install the required dependencies.
 
 ## Commit Standards

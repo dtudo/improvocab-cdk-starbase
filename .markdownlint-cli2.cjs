@@ -1,6 +1,5 @@
 module.exports = {
-  globs: ['**/*.md'],
-  ignores: ['node_modules/'],
+  ignores: ['node_modules/**', 'build/**', '.cache/**', 'coverage/**'],
   config: {
     'line-length': false,
     'ul-style': {

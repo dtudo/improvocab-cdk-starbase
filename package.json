@@ -1,0 +1,34 @@
+{
+  "name": "@dtudo/improvocab-cdk-starbase",
+  "version": "0.0.0",
+  "description": "CDK library of shared infrastructure constructs",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtudo/improvocab-cdk-starbase.git"
+  },
+  "scripts": {
+    "commit": "commit",
+    "husky": "./scripts/install-husky.cjs",
+    "prepare": "npm run husky",
+    "lint:md": "markdownlint-cli2 '**/*.md' --fix",
+    "lint:es": "eslint . --fix",
+    "lint": "npm run lint:md && npm run lint:es",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/format": "^19.8.1",
+    "@commitlint/prompt-cli": "^19.8.1",
+    "@eslint/js": "^9.32.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.4",
+    "markdownlint": "^0.38.0",
+    "markdownlint-cli2": "^0.18.1",
+    "prettier": "3.6.2"
+  }
+}
